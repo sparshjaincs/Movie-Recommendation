@@ -1,0 +1,205 @@
+html{
+    top:0;
+    left:0;
+    
+    max-width:100%;
+    overflow-x:hidden;
+}
+body{
+    background-color:#0A0D06;
+	
+}
+header{
+	margin-top:-1vw;
+	margin-left:-1vw;
+    background-color: #19232E;
+    width:103%;
+    height:6vw;
+	position:fixed;
+	overflow: hidden;
+}
+.logo{
+	float:left;
+	font-size:2.8vw;
+	font-weight:700;
+	letter-spacing:.3vw;
+	padding:1vw;
+	margin-left:2vw;
+	font-family:cursive;
+	color:#0F79AF;
+	text-shadow:2px 2px 14px #19232E;
+}
+.search{
+	float:right;
+	padding:1.5vw;
+	margin-right:6vw;
+	
+}
+.search input{
+	font-size:1.2vw;
+	font-weight:600;
+	height:2vw;
+	border-radius:5px;
+	padding:.6vw;
+	width:25vw;
+	background-color:#19232E;
+	color:#757575;
+	box-shadow:2px 2px 8px #000;
+	border:none;
+}
+.search input:focus{
+	outline:none;
+	border:1px solid #0F79AF;
+	background-color:#0A0D06;
+}
+section{
+    width:100%;
+    
+ 
+    overflow:hidden;
+    
+}
+nav{
+    margin:1vw;
+    position:fixed;
+    
+    float:left;
+    width:40%;
+    height:43vw;
+    
+
+}
+article{
+    width:57%;
+    float:right;
+	margin:1vw;
+	color:white;
+  
+}
+.poster img {
+	width:93.5%;
+	padding:1vw;
+	
+	height:42.5vw;
+	box-shadow:2px 2px 8px #000;
+}
+.title{
+	padding:2vw;
+	float:left;
+	
+	width:54vw;
+	height:7vw;
+	
+}
+.title p{
+	font-family:cursive;
+	font-size:3vw;
+	font-weight:700;
+	
+
+}
+.summary{
+	font-size:1.5vw;
+	font-family: cursive;
+	font-weight: 600;
+	letter-spacing:.2vw;
+	width:56vw;
+	padding:1vw;
+	margin-bottom:1vw;
+}
+.feature{
+	
+	width:50vw;
+	height:6vw;
+	font-family: cursive;
+	margin-left:3.2vw;
+	box-shadow:2px 2px 8px #000;
+	padding-bottom:1vw;
+	
+}
+.feature .imdb{
+	float:left;
+	padding:1vw;
+	margin-right:2.5vw;
+}
+.feature span{
+	font-size:1.6vw;
+	font-weight:600;
+	padding:1vw;
+}
+.feature p{
+	font-size: 1.4vw;
+}
+.summary1{
+	font-size:1.5vw;
+	font-family: cursive;
+	font-weight: 600;
+	letter-spacing:.2vw;
+	width:55vw;
+	padding:1vw;
+	margin-bottom:1vw;
+	margin-right:1vw;
+}
+
+.summary1 span{
+	font-size:2vw;
+	font-family: cursive;
+	font-weight: 600;
+	letter-spacing:.2vw;
+	width:56vw;
+	padding:2vw;
+	margin-bottom:1vw;
+}
+.links{
+	width:56vw;
+	font-family:cursive;
+	height:25vw;
+
+}
+.links span{
+	font-size:1.8vw;
+	font-weight:600;
+	padding:1vw;
+}
+.recommend{
+	width:56vw;
+	font-family:cursive;
+	
+	
+}
+.recommend span{
+	font-size:1.8vw;
+	font-weight:600;
+	padding:1vw;
+}
+.recommend .container{
+width:100%;
+padding:1vw;
+display:inline-block;
+margin-left:5vw;
+
+
+}
+.recommend .image{
+	width:35%;
+	height:25vw;
+	
+	display:inline-block;
+	margin:1vw;
+	box-shadow:4px 4px 12px black;
+	
+}
+.recommend .img-cont{
+	margin:1vw;
+	width:90%;
+	height:18vw;
+	border:1px solid white;
+
+}
+.recommend .img-con{
+
+
+}
+.recommend .img-rat span{
+
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Movie Recommendation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static',filename='sheet1.css')}}"></link>
+</head>
+<body>
+<header>
+       
+        <div class="logo">Movie Recommender</div>
+        <div class="search"> <form action="\query" method="POST">
+                <input type="text" name="search"  placeholder="Search Movies"></input>
+                </form>
+                </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+<section>
+    <nav>
+                {% if file %}
+            <div class="poster">
+    
+                    <img alt="sorry" src="{{file['result']['image']}}"></im>
+                    
+                    
+                    
+                    </div>
+    </nav>
+    <article>
+            <div class="title">
+                    <center> <p>{{file['result']['title']}}</p></center>
+                 
+                 </div>
+                 <hr>
+                 <div class="summary">
+                        {{file['result']['summary']}}
+                </div>
+                <div class="feature">
+        
+                        <div class="imdb">
+                        <p><span>IMDB</span>   {{file['result']['rating']}}</p>
+                        </div>
+                        <div class="imdb">
+                        <p>|<span>Year</span>  {{file['result']['year']}}</p>
+                        </div>
+                        <div class="imdb">
+                        <p>|<span>Duration</span>   {{file['result']['duration']}} Min. </p>
+                        </div>
+                    </div>
+                    <div class="feature">
+            
+                            <div class="imdb">
+                            <p><span>Publish</span>   {{file['result']['published']}}</p>
+                            </div>
+                            <div class="imdb">
+                            <p>|<span>IMBD ID</span>    {{file['result']['imdb_id']}}</p>
+                            </div>
+                    
+        
+            </div>
+            <div class="feature">
+                        
+                    <div class="imdb">
+                    <p><span>Genres  :</span> {{file['result']['genres']}} </p>
+                    </div>
+                    
+            </div>
+            <div class="feature">
+            
+                    <div class="imdb">
+                    <p><span>Director  :</span>   {{file['result']['director']}}</p>
+                    </div>
+            </div>
+            <div class="summary1">
+                <span><center>Cast </center><hr></span>
+                {{file['result']['stars']}}
+            </div>
+            {% endif %}
+        <div class="links">
+                <span><center>Links </center><hr></span>
+        </div>
+
+        <div class="recommend">
+                <span><center>People may also Like.... </center><hr>
+                </span>
+                <div class="container">
+                    <div class="image">
+                        <div class="img-cont"></div>
+                        <div class="img-con"><center>movie name</center> </div>
+                        <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                    <div class="image">
+                            <div class="img-cont"></div>
+                            <div class="img-con"><center>movie name</center> </div>
+                            <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                    <div class="image">
+                            <div class="img-cont"></div>
+                            <div class="img-con"><center>movie name</center> </div>
+                            <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                    <div class="image">
+                            <div class="img-cont"></div>
+                            <div class="img-con"><center>movie name</center> </div>
+                            <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                    <div class="image">
+                            <div class="img-cont"></div>
+                            <div class="img-con"><center>movie name</center> </div>
+                            <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                    <div class="image">
+                            <div class="img-cont"></div>
+                            <div class="img-con"><center>movie name</center> </div>
+                            <div class="img-rat"><center>IMDB 7.8 | Duration 181min</center></div>
+                    </div>
+                </div>
+
+        </div>
+
+    </article>
+</section>
+<footer>
+
+</footer>
+</body>
+</html>
+
+

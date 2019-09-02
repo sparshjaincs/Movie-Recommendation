@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Movie Recommendation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static',filename='sheet.css')}}"></link>
+</head>
+<body>
+<header>
+	<div class="logo">Movie Recommender</div>
+    <div class="search"> <form action="\query" method="POST">
+	<input type="text" name="search"  placeholder="Search Movies"></input>
+	</form>
+    </div>
+    
+</header>  
+<br>
+<br>
+<br>
+<br>
+<section>
+        <div class="slide-box">
+                {% for x in file4%}
+                <div class="image2">
+                        <div class="img-cont2"><a href="/query/{{x['result']['imdb_id']}}"><img src="{{x['result']['image']}}" alt="sorry "></img></a></div>
+                        
+                </div>
+                {%endfor%}
+        </div>
+    
+        <div class="recommend1">
+            <div class="topic2">Watch Next Movies</div>
+            
+                {%for x in file3%}
+
+                <div class="image1">
+                        <div class="img-cont1"><a href="/query/{{x['result']['imdb_id']}}"><img src="{{x['result']['image']}}" alt="sorry "></img></a></div>
+                        <div class="img-con1"><center>{{x['result']['title']}}</center> </div>
+                        <div class="img-rat1"><center>IMDB {{x['result']['rating']}}| Duration {{ x['result']['duration']}}</center></div>
+                </div>
+                {%endfor%}
+                
+        </div>
+        
+       
+      
+    
+    
+    
+        <div class="recommend">
+            <div class="topic1">Trending Movies</div>
+            
+                {%for x in file2%}
+
+                <div class="image">
+                        <div class="img-cont"><a href="/query/{{x['result']['imdb_id']}}"><img src="{{x['result']['image']}}" alt="sorry "></img></a></div>
+                        <div class="img-con"><center>{{x['result']['title']}}</center> </div>
+                        <div class="img-rat"><center>IMDB {{x['result']['rating']}}| Duration {{ x['result']['duration']}}</center></div>
+                </div>
+                {%endfor%}
+                
+        </div>
+        
+       
+      
+    
+
+</section>
+<footer>
+
+
+</footer>
+
+</body>
+<script>
+var slideIndex =3 ;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("image");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 4} 
+  slides[slideIndex-1].style.display = "inline-block"; 
+  slides[slideIndex-2].style.display = "inline-block"; 
+  slides[slideIndex-3].style.display = "inline-block"; 
+  slides[slideIndex-4].style.display = "inline-block"; 
+  setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+
+var slideIndex1 =3 ;
+showSlides1();
+
+function showSlides1() {
+  var i;
+  var slides = document.getElementsByClassName("image1");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex1++;
+  if (slideIndex1 > slides.length) {slideIndex1 = 4} 
+  slides[slideIndex1-1].style.display = "inline-block"; 
+  slides[slideIndex1-2].style.display = "inline-block"; 
+  slides[slideIndex1-3].style.display = "inline-block"; 
+  slides[slideIndex1-4].style.display = "inline-block"; 
+  setTimeout(showSlides1, 10000); // Change image every 2 seconds
+}
+var slideIndex2 =1 ;
+showSlides2();
+
+function showSlides2() {
+  var i;
+  var slides = document.getElementsByClassName("image2");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex2++;
+  if (slideIndex2 > slides.length) {slideIndex2 = 1} 
+  slides[slideIndex2-1].style.display = "inline-block"; 
+
+  setTimeout(showSlides2, 10000); // Change image every 2 seconds
+}
+</script>
+</html>

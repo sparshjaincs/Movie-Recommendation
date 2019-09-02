@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Movie Recommendation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static',filename='sheet.css')}}"></link>
+</head>
+<body>
+<header>
+	<div class="logo">Movie Recommender</div>
+    <div class="search"> <form action="\query" method="POST">
+	<input type="text" name="search"  placeholder="Search Movies"></input>
+	</form>
+	</div>
+</header>  
+<br>
+<br>
+<br>
+<br>
+{% for x in file2%}
+
+{{x}}
+
+{%endfor%}
+</body>
+</html>
